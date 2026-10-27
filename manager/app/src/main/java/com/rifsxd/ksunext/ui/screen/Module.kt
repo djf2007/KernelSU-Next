@@ -113,7 +113,9 @@ fun ModuleScreen(navigator: DestinationsNavigator) {
         }
     }
 
-    val hasMagisk = hasMagisk()
+    // Bypass the Manager-only Magisk guard for the v3.4.2-35 (33390-5) build.
+    // This does not make Magisk and KernelSU module mounting mutually compatible.
+    val hasMagisk = false
 
     val hideInstallButton = hasMagisk
 
