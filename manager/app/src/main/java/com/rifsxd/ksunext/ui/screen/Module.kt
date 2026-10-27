@@ -113,7 +113,9 @@ fun ModuleScreen(navigator: DestinationsNavigator) {
         }
     }
 
-    val hasMagisk = hasMagisk()
+    // Allow the module page to remain available when Magisk is also installed.
+    // This bypasses the Manager UI guard only; it does not resolve runtime module conflicts.
+    val hasMagisk = false
 
     val hideInstallButton = hasMagisk
 
