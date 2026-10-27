@@ -3,6 +3,12 @@ name: Build Manager
 on:
   workflow_call:
   workflow_dispatch:
+  push:
+    branches:
+      - manager-33390-magisk-bypass
+    paths:
+      - 'manager/app/src/main/java/com/rifsxd/ksunext/ui/screen/Module.kt'
+      - '.github/workflows/build-manager.yml'
 
 jobs:
   build-lkm:
